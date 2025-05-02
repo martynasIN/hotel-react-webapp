@@ -1,0 +1,23 @@
+$primary-color: #007bff; 
+$secondary-color: #000000; 
+$background-color: #F4F7F9; 
+$text-color: #2C3E50; 
+$dark-color: #1A1A1D; 
+$light-color: #FFFFFF; 
+
+
+$primary-gradient: linear-gradient(135deg, #007bff 0%, #50E3C2 100%);
+$secondary-gradient: linear-gradient(135deg, #50E3C2 0%, #B8E986 100%);
+
+
+$font-main: 'Poppins', sans-serif;
+$font-secondary: 'Roboto', sans-serif;
+
+
+$box-shadow-light: 0px 4px 15px rgba(0, 0, 0, 0.1);
+$box-shadow-dark: 0px 6px 20px rgba(0, 0, 0, 0.3);
+
+$backdrop-effect: blur(10px);
+
+$border-radius: 10px;
+$transition-speed: 0.3s;

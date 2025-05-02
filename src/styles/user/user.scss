@@ -1,0 +1,92 @@
+@use 'variables';
+
+.form-container {
+    background: variables.$light-color;
+    padding: 40px;
+    border-radius: variables.$border-radius;
+    box-shadow: variables.$box-shadow-light;
+    max-width: 500px;
+    margin: 100px auto; 
+    text-align: center;
+
+    h2 {
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: variables.$text-color;
+    }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(variables.$text-color, 0.2);
+    border-radius: variables.$border-radius;
+    font-size: 16px;
+    transition: border-color variables.$transition-speed, box-shadow variables.$transition-speed;
+    background: #f9f9f9;
+
+    &:focus {
+        border-color: variables.$primary-color;
+        box-shadow: 0px 4px 10px rgba(variables.$primary-color, 0.3);
+        outline: none;
+        background: white;
+    }
+}
+
+.btn-submit {
+    background: variables.$primary-color;
+    color: variables.$light-color;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: variables.$border-radius;
+    cursor: pointer;
+    transition: background variables.$transition-speed, transform variables.$transition-speed;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: variables.$box-shadow-light;
+
+    &:hover {
+        transform: scale(0.95);
+        box-shadow: variables.$box-shadow-dark;
+    }
+}
+
+.error {
+    color: #d9534f;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.form-footer {
+    margin-top: 15px;
+    font-size: 14px;
+
+    a {
+        color: variables.$primary-color;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+}

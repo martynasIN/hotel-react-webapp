@@ -1,0 +1,75 @@
+@use 'variables';
+
+header {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+
+    nav {
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: inline-block;
+                margin-right: 20px;
+                transition: transform variables.$transition-speed;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    .navbar {
+        -webkit-backdrop-filter: variables.$backdrop-effect;
+        backdrop-filter: variables.$backdrop-effect;
+        padding: 15px 0;
+
+        .logo-title {
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            color: variables.$light-color;
+
+            &:hover {
+                color: variables.$secondary-color;
+            }
+        }
+
+        .navbar-toggler {
+            color: rgba(255, 255, 255, 0.55);
+            border: 0.1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar-toggler-icon {
+            filter: brightness(0) invert(1);
+        }
+
+        .navbar-nav {
+            .nav-item {
+                margin-left: 20px;
+                margin-right: 0px;
+
+                .nav-link {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: variables.$light-color;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 995px) {
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        li {
+            margin: 10px 0;
+        }
+    }
+}
